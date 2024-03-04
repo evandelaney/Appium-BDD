@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "1CC6A38C-020B-47ED-9BEB-30DFA4C91C1F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Appium-BDD.xcodeproj",
+          "identifier" : "37D81B0E2B93EB360007245F",
+          "name" : "Appium-BDD"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Appium-BDD.xcodeproj",
+      "identifier" : "37D81B0E2B93EB360007245F",
+      "name" : "Appium-BDD"
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Appium-BDD.xcodeproj",
+        "identifier" : "37D81B282B93EB3C0007245F",
+        "name" : "UI Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
