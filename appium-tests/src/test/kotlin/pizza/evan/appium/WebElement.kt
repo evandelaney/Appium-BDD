@@ -2,27 +2,40 @@ package pizza.evan.appium
 
 import org.openqa.selenium.WebElement
 
+/**
+ * Provides the text string for a web element
+ * @returns the attribute "value" for Apple elements and "text" for Android elements
+ */
 val WebElement.string: String
     get() {
-        return try {
-            getAttribute("value") ?: ""
+        return if (isApple) {
+            getAttribute("value")
         }
-        catch (e: Exception) {
-            try {
-                getAttribute("label") ?: ""
-            }
-            catch (e: Exception) {
-                getAttribute("text") ?: ""
-            }
+        else {
+            getAttribute("text")
         }
     }
 
+/**
+ * Provides the accessibility string for a web element
+ * @returns the attribute "label" for Apple elements and "content-desc" for Android elements
+ */
 val WebElement.accessibilityString: String
     get() {
-        return try {
+        return if (isApple) {
             getAttribute("label") ?: ""
         }
-        catch (e: Exception) {
+        else {
             getAttribute("content-desc") ?: ""
         }
+    }
+
+/**
+ * Determines if a UI element is from an Apple platform
+ * @returns true when the attribute "type" contains "XCUIElementType"
+ */
+val WebElement.isApple: Boolean
+    get() {
+        val type = getAttribute("type")
+        return type.contains("xcuielementtype", ignoreCase = true)
     }

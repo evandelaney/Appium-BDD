@@ -28,6 +28,3 @@ As the project implies, next step is adding Cucumber to the Appium project.
 Write a simple Gherkin feature for a Login Screen. Three scenarios: (1) tapping login without username and password fails, (2) usernames are validated as emails regex, and (3) passwords must have 8 characters and one must be a number.
 
 As the code is written to satisfy these scenarios, TDD should be used to build out a comprehensive suite of unit tests.
-
-## Side Note
-The Appium `getAttribute` code is the weakest part of this proof of concept. I think `WebElement.kt` needs improvement.
