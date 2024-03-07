@@ -15,6 +15,10 @@
 		37D81B242B93EB3B0007245F /* HelloWorldViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D81B232B93EB3B0007245F /* HelloWorldViewTests.swift */; };
 		37D81B2E2B93EB3C0007245F /* HelloWorldPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D81B2D2B93EB3C0007245F /* HelloWorldPageTests.swift */; };
 		37E5C17A2B9506ED0028B054 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 37E5C1792B9506ED0028B054 /* ViewInspector */; };
+		37FC6C4B2B9811FD00CEDF38 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC6C4A2B9811FD00CEDF38 /* LoginView.swift */; };
+		37FC6C4D2B9819C600CEDF38 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC6C4C2B9819C600CEDF38 /* AppState.swift */; };
+		37FC6C4F2B981A1800CEDF38 /* AppStateContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC6C4E2B981A1800CEDF38 /* AppStateContainerView.swift */; };
+		37FC6C532B98907400CEDF38 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC6C522B98907400CEDF38 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		37D81B2D2B93EB3C0007245F /* HelloWorldPageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldPageTests.swift; sourceTree = "<group>"; };
 		37E5C17B2B95183E0028B054 /* UI Tests Plan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "UI Tests Plan.xctestplan"; sourceTree = "<group>"; };
 		37E5C17C2B95187A0028B054 /* Unit Tests Plan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Unit Tests Plan.xctestplan"; sourceTree = "<group>"; };
+		37FC6C4A2B9811FD00CEDF38 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		37FC6C4C2B9819C600CEDF38 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		37FC6C4E2B981A1800CEDF38 /* AppStateContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateContainerView.swift; sourceTree = "<group>"; };
+		37FC6C522B98907400CEDF38 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				37D81B122B93EB370007245F /* AppiumTesterApp.swift */,
-				37D81B142B93EB370007245F /* HelloWorldView.swift */,
+				37FC6C4C2B9819C600CEDF38 /* AppState.swift */,
 				37D81B162B93EB3B0007245F /* Assets.xcassets */,
 				37D81B182B93EB3B0007245F /* Preview Content */,
+				37FC6C512B98903800CEDF38 /* View Models */,
+				37FC6C502B98902700CEDF38 /* Views */,
 			);
 			path = "Appium-BDD";
 			sourceTree = "<group>";
@@ -147,6 +157,24 @@
 				376311432B94F27B00CB542C /* Pages */,
 			);
 			path = "UI Tests";
+			sourceTree = "<group>";
+		};
+		37FC6C502B98902700CEDF38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37FC6C4E2B981A1800CEDF38 /* AppStateContainerView.swift */,
+				37D81B142B93EB370007245F /* HelloWorldView.swift */,
+				37FC6C4A2B9811FD00CEDF38 /* LoginView.swift */,
+				37FC6C522B98907400CEDF38 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		37FC6C512B98903800CEDF38 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +335,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FC6C4F2B981A1800CEDF38 /* AppStateContainerView.swift in Sources */,
+				37FC6C4B2B9811FD00CEDF38 /* LoginView.swift in Sources */,
 				37D81B152B93EB370007245F /* HelloWorldView.swift in Sources */,
+				37FC6C532B98907400CEDF38 /* HomeView.swift in Sources */,
 				37D81B132B93EB370007245F /* AppiumTesterApp.swift in Sources */,
+				37FC6C4D2B9819C600CEDF38 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

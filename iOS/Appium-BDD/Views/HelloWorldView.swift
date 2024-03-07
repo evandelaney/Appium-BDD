@@ -6,15 +6,29 @@ import SwiftUI
 
 struct HelloWorldView: View {
     
+    @EnvironmentObject private var state: AppState
+    
     var body: some View {
         VStack {
+            Spacer()
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundStyle(.tint)
                 .accessibilityIdentifier("icon")
             
             Text("Hello, world!")
                 .accessibilityIdentifier("greeting")
+            
+            Spacer()
+            
+            HStack {
+                Spacer()
+                
+                Button(action: { state.state = .login }) {
+                    Text("Next")
+                }
+                .padding()
+                .accessibilityIdentifier("next_button")
+            }
         }
         .padding()
     }

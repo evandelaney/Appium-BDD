@@ -11,7 +11,7 @@ import pizza.evan.appium.string
 
 class HelloWorldPage(
     driver: AppiumDriver
-) {
+): Page {
 
     @iOSXCUITFindBy(accessibility = "greeting")
     @AndroidFindBy(id = "greeting")
@@ -20,6 +20,9 @@ class HelloWorldPage(
     @iOSXCUITFindBy(accessibility = "icon")
     @AndroidFindBy(id = "icon")
     private lateinit var iconImage: WebElement
+
+    @iOSXCUITFindBy(accessibility = "next_button")
+    private lateinit var nextButton: WebElement
 
     init {
         PageFactory.initElements(AppiumFieldDecorator(driver), this)
@@ -30,4 +33,10 @@ class HelloWorldPage(
 
     val iconAccessibilityText: String
         get() = iconImage.accessibilityString
+
+    override fun close() { /* root page */ }
+
+    fun tapNextButton() {
+        nextButton.click()
+    }
 }

@@ -7,9 +7,12 @@ import SwiftUI
 @main
 struct AppiumTesterApp: App {
     
+    @StateObject private var state = AppState()
+    
     var body: some Scene {
         WindowGroup {
-            HelloWorldView()
+            AppStateContainerView()
+                .environmentObject(state)
         }
     }
 }

@@ -20,20 +20,6 @@
                ReferencedContainer = "container:Appium-BDD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37E5C1742B9501700028B054"
-               BuildableName = "Appium Tests"
-               BlueprintName = "Appium Tests"
-               ReferencedContainer = "container:Appium-BDD.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -16,10 +16,13 @@ kotlin {
 
 dependencies {
     testImplementation(libs.appium)
+
     testImplementation(platform(libs.junit.bom))
-    testImplementation(libs.junit.jupiter)
-    testImplementation(libs.bundles.cucumber)
+    testImplementation(libs.bundles.junit)
     testRuntimeOnly(libs.junit.launcher)
+
+    testImplementation(platform(libs.cucumber.bom))
+    testImplementation(libs.bundles.cucumber)
 }
 
 tasks.test {
@@ -30,5 +33,6 @@ tasks.test {
 
     // Launch tests with ./gradlew test -Dplatform={ios|android}
     // passing the platform on which you wish to run tests.
-    systemProperty("platform", System.getProperty("platform"))
+    systemProperty("platform", System.getProperty("platform") ?: "ios")
+    systemProperty("cucumber.junit-platform.naming-strategy", "long")
 }

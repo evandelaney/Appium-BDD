@@ -21,10 +21,6 @@ The iOS project has a Page Object Model setup using XCUITest. These have a simil
 The iOS project also has unit tests that use the open source library ViewInspector to make white-box testing assertions against `HelloWorldView`.
 
 ## What's next?
-As the project implies, next step is adding Cucumber to the Appium project.
+Write more Gherkin features for a Login Screen. Three scenarios: (1) tapping login without username and password fails, (2) usernames are validated as emails regex, and (3) passwords must have 8 characters and one must be a number.
 
-**The goal is to understand if BDD style testing is possible and productive at the Appium layer of abstraction.**
-
-Write a simple Gherkin feature for a Login Screen. Three scenarios: (1) tapping login without username and password fails, (2) usernames are validated as emails regex, and (3) passwords must have 8 characters and one must be a number.
-
-As the code is written to satisfy these scenarios, TDD should be used to build out a comprehensive suite of unit tests.
+Refactor the iOS code to be unit testable.
