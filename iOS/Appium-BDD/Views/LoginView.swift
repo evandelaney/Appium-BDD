@@ -26,7 +26,7 @@ struct LoginView: View {
             .padding()
             .accessibilityIdentifier("password")
             
-            Button(action: { state.state = .home }) {
+            Button(action: { state.value = .home }) {
                 Text("Log In")
             }
             .buttonStyle(.borderedProminent)

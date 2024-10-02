@@ -3,30 +3,33 @@
 //
 
 import XCTest
+import SwiftUI
 import ViewInspector
 @testable import Appium_BDD
 
 final class HelloWorldViewTests: XCTestCase {
     
-    private var view: HelloWorldView!
+    private var view: (any View)!
 
-    override func setUpWithError() throws
+    override func setUp() async throws
     {
-        try super.setUpWithError()
+        try await super.setUp()
         
-        view = HelloWorldView()
+        let state = AppState()
+        view = await HelloWorldView().environmentObject(state)
     }
 
-    override func tearDownWithError() throws
+    override func tearDown() async throws
     {
         view = nil
         
-        try super.tearDownWithError()
+        try await super.tearDown()
     }
     
     func test_GreetingLabel_HasExpectedValue() throws
     {
-        let greetingText = try view.inspect()
+        let greetingText = try view
+            .inspect()
             .find(viewWithAccessibilityIdentifier: "greeting")
             .text()
         
@@ -35,7 +38,8 @@ final class HelloWorldViewTests: XCTestCase {
     
     func test_IconImage_HasExpectedAccessibilityValue() throws
     {
-        let iconImage = try view.inspect()
+        let iconImage = try view
+            .inspect()
             .find(viewWithAccessibilityIdentifier: "icon")
             .image()
         

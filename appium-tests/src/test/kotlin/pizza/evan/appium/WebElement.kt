@@ -1,6 +1,7 @@
 package pizza.evan.appium
 
 import org.openqa.selenium.WebElement
+import javax.naming.directory.NoSuchAttributeException
 
 /**
  * Provides the text string for a web element
@@ -36,6 +37,10 @@ val WebElement.accessibilityString: String
  */
 val WebElement.isApple: Boolean
     get() {
-        val type = getAttribute("type")
-        return type.contains("xcuielementtype", ignoreCase = true)
+        try {
+            val type = getAttribute("type")
+            return type.contains("xcuielementtype", ignoreCase = true)
+        } catch (e: Exception) {
+            return false
+        }
     }

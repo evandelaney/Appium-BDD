@@ -22,6 +22,7 @@ class HelloWorldPage(
     private lateinit var iconImage: WebElement
 
     @iOSXCUITFindBy(accessibility = "next_button")
+    @AndroidFindBy(id = "next_button")
     private lateinit var nextButton: WebElement
 
     init {

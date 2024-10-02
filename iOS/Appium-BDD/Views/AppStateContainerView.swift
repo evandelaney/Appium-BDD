@@ -9,10 +9,10 @@ struct AppStateContainerView: View {
     @EnvironmentObject var state: AppState
     
     var body: some View {
-        if state.state == .login {
+        if state.value == .login {
             LoginView()
         }
-        else if state.state == .home {
+        else if state.value == .home {
             HomeView()
         }
         else  {
@@ -23,4 +23,5 @@ struct AppStateContainerView: View {
 
 #Preview {
     AppStateContainerView()
+        .environmentObject(AppState())
 }

@@ -12,5 +12,5 @@ final class AppState: ObservableObject {
         case home
     }
     
-    @Published var state: State = .helloWorld
+    @Published var value: State = .helloWorld
 }

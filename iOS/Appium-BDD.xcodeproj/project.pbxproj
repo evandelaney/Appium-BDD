@@ -124,10 +124,10 @@
 			children = (
 				37D81B122B93EB370007245F /* AppiumTesterApp.swift */,
 				37FC6C4C2B9819C600CEDF38 /* AppState.swift */,
-				37D81B162B93EB3B0007245F /* Assets.xcassets */,
 				37D81B182B93EB3B0007245F /* Preview Content */,
 				37FC6C512B98903800CEDF38 /* View Models */,
 				37FC6C502B98902700CEDF38 /* Views */,
+				37D81B162B93EB3B0007245F /* Assets.xcassets */,
 			);
 			path = "Appium-BDD";
 			sourceTree = "<group>";
@@ -261,7 +261,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = "Evan DeLaney";
 				TargetAttributes = {
 					37D81B0E2B93EB360007245F = {
@@ -551,7 +551,6 @@
 		37D81B372B93EB3C0007245F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -572,7 +571,6 @@
 		37D81B382B93EB3C0007245F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -593,7 +591,6 @@
 		37D81B3A2B93EB3C0007245F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -613,7 +610,6 @@
 		37D81B3B2B93EB3C0007245F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

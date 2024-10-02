@@ -19,8 +19,8 @@ class IosPlatform: Platform() {
     override fun makeDriver(): AppiumDriver {
         val options = XCUITestOptions()
             .setBundleId("pizza.evan.Appium-BDD")
-            .setDeviceName("iPhone 15 Pro")
-            .setPlatformVersion("17.0")
+            .setDeviceName("iPhone 16 Pro")
+            .setPlatformVersion("18.0")
 
         return IOSDriver(appiumServer, options)
     }

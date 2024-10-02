@@ -7,6 +7,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -31,14 +32,27 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppiumBDDTheme {
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .semantics { testTagsAsResourceId = true },
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
+                    Box (
+                        modifier = Modifier.fillMaxSize()
                     ) {
-                        Greeting("world")
+                        Greeting(
+                            modifier = Modifier.align(Alignment.Center),
+                            name = "world"
+                        )
+                        Button(
+                            onClick = { /* Do something! */ },
+                            modifier = Modifier
+                                .align(Alignment.BottomEnd)
+                                .padding(16.dp)
+                                .testTag("next_button")
+                        ) {
+                            Text("Next")
+                        }
                     }
                 }
             }
@@ -47,9 +61,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun Greeting(
+    name: String,
+    modifier: Modifier = Modifier
+) {
     Column(
-        modifier = Modifier.padding(16.dp).semantics { testTagsAsResourceId = true },
+        modifier = modifier.padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
@@ -61,7 +78,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         )
         Text(
             text = "Hello, $name!",
-            modifier = modifier.testTag("greeting")
+            modifier = Modifier.testTag("greeting")
         )
     }
 }

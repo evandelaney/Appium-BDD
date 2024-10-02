@@ -23,7 +23,7 @@ struct HelloWorldView: View {
             HStack {
                 Spacer()
                 
-                Button(action: { state.state = .login }) {
+                Button(action: { state.value = .login }) {
                     Text("Next")
                 }
                 .padding()
